@@ -9,6 +9,12 @@ gin+websocket+mongodb实现 IM 即时聊天系统
 - `MongoDB` 用来存放用户聊天信息
 - `Redis` 用来存储处理过期信息
 
+# 项目教程
+B站：https://www.bilibili.com/video/BV1BP4y1H7gV
+
+博客：https://blog.csdn.net/weixin_45304503/article/details/121787022
+
+
 # 项目结构
 
 ```
@@ -33,6 +39,46 @@ gin-chat-demo/
 - 两人通信
 - 在线、不在线应答
 - 查看历史聊天记录
+
+# 配置文件
+- conf/config.ini
+
+```ini
+#debug开发模式,release生产模式
+[service]
+AppMode = debug
+HttpPort = :3000 
+# 运行端口号 3000端口
+
+[mysql]
+Db = mysql
+DbHost = "" 
+# mysql的ip地址
+DbPort = ""
+# mysql的端口号,默认3306
+DbUser = ""
+# mysql user
+DbPassWord = ""
+# mysql password
+DbName = ""
+# 数据库名字
+
+[redis]
+RedisDb = ""
+# redis 名字
+RedisAddr = ""
+# redis 地址
+RedisPw = ""
+# redis 密码
+RedisDbName = ""
+# redis 数据库名
+
+[MongoDB]
+MongoDBName =  ""
+MongoDBAddr = ""
+MongoDBPwd = ""
+MongoDBPort = ""
+```
 
 # 项目运行
 
